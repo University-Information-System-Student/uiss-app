@@ -1,0 +1,8 @@
+.nav-button {
+    flex: 1 0 100%;
+    padding: 20%;
+}
+
+.full-height-vh{
+	height: 100vh !important;
+}
