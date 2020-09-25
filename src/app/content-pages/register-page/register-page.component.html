@@ -1,0 +1,72 @@
+<!--Login Page Starts-->
+<form id="contentStart">
+  <div class="container-fluid">
+    <div class="row full-height-vh m-0">
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-lg-4 d-lg-block py-2 px-3 text-center align-middle">
+                  <img
+                        src="../../assets/images/login.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 bg-white px-3 pt-3">
+                    <h4 class="card-title mb-2">Register</h4>
+                    <p class="card-text mb-3">
+                      University system
+                    </p>
+
+                    <div class="form-group">
+                      <label class="form-label" for="user_name">
+                        <i class="fas fa-user"></i>
+                      </label>
+                      <input class="form-input" type="text" name="user_name" id="user_name" placeholder="User name" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="your_pass">
+                        <i class="fas fa-unlock"></i>
+                      </label>
+                      <input class="form-input" type="password" name="your_pass" id="user_form" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="your_pass">
+                        <i class="fas fa-lock"></i>
+                      </label>
+                      <input class="form-input" type="password" name="repeat_pass" id="user_form" placeholder="Repeat password" />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                        </div>
+                      </div>
+
+                    <hr />
+                    <div class="d-flex flex-wrap justify-content-between mt-2">
+                      <a class="flex-grow-1" [routerLink]="['/login']"
+                        class="text-primary text-option-size">
+                        I am already member
+                      </a>
+
+                      <button type="button" class="btn btn-info">Register</button>
+
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
