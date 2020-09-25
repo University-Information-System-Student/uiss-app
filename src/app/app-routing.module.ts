@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, Routes } from '@angular/router';
-import { ContentPagesModule } from './start-pages/content-pages.module';
+import { ContentPagesModule } from './content-pages/content-pages.module';
 
 const appRoutes: Routes = [
   {
     path: '',
-    loadChildren: (() => import('./start-pages/content-pages.module').then(m => m.ContentPagesModule))
+    loadChildren: (() => import('./content-pages/content-pages.module').then(m => m.ContentPagesModule))
   },
 ];
 
