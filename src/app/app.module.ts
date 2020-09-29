@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
-import { AppSidebarComponent } from './shared/app-sidebar/app-sidebar.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { PagesLayoutComponent } from './layouts/pages-layout/pages-layout.component';
 import { SharedModule } from './shared/shared.module';
@@ -12,9 +11,8 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AppSidebarComponent,
     AppLayoutComponent,
-    PagesLayoutComponent,
+    PagesLayoutComponent
   ],
   imports: [
     BrowserModule,

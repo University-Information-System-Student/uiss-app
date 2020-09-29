@@ -4,12 +4,7 @@ import {RouterModule, Routes } from '@angular/router';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
-const contentPagesRoute: Routes = [
-  {
-    path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-  },
+const CONTENTPAGESROUTE: Routes = [
   {
     path: 'login',
     component: LoginPageComponent
@@ -24,7 +19,7 @@ const contentPagesRoute: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forChild(contentPagesRoute)
+    RouterModule.forChild(CONTENTPAGESROUTE)
   ],
   exports: []
 })

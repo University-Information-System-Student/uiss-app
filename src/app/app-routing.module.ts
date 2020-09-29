@@ -9,7 +9,7 @@ import { FULL_ROUTES } from './shared/app-routes/full-routes';
 
 const appRoutes: Routes = [
 
-  { path: '', component: AppLayoutComponent, data: { title: 'full Views' }, children: FULL_ROUTES},
+  { path: '', component: AppLayoutComponent, data: { title: 'full Views' }, children: FULL_ROUTES },
   { path: '', component: PagesLayoutComponent, data: { title: 'content Views' }, children: CONTENT_ROUTES },
 
 ];
@@ -20,6 +20,6 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
-  exports: [ContentPagesModule]
+  exports: []
 })
 export class AppRoutingModule { }
