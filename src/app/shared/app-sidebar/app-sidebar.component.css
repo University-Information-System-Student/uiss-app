@@ -1,0 +1,38 @@
+.sidebar {
+    position: fixed;
+    top:0;
+    width: 250px;
+    height: 100vh;
+    background-color: #683F60 ;
+}
+
+
+
+
+.sidebar-header {
+    padding: 20px 15px;
+
+}
+
+.sidebar-header > a.nav-toggle {
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      right: 14px;
+      top: 32px;
+      color: rgba(255, 255, 255, 0.55);
+
+}
+
+
+
+.sidebar-body {
+    position: relative;
+    height: calc(100vh - 90px);
+    overflow: auto;
+    z-index: 4;
+  }
+    

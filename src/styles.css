@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* .wrapper.collapsed-side-bar {
+    width: 60px;
+} */
+
+.collapsed-side-bar .sidebar {
+    width: 60px !important;
+}
+
+.main-panel >
+    .main-content {
+      padding-left: 240px;
+    
+  }
+
+
+  .wrapper.collapsed-side-bar .main-panel > .main-content {
+      padding-left: 60px;
+  }
