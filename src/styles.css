@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.cursor-pointer{
+.cursor-pointer {
     cursor: pointer;
 }
 
@@ -11,13 +11,54 @@
     width: 60px !important;
 }
 
-.main-panel >
-    .main-content {
-      padding-left: 240px;
-    
+.main-panel>.main-content {
+    padding-left: 240px;
+
+}
+
+
+.wrapper.collapsed-side-bar .main-panel>.main-content {
+    padding-left: 60px;
+}
+
+
+.navigation {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.navigation > li {
+    color:white;
+}
+
+.navigation > li > a {
+    display: block;
+    overflow: hidden;
+    line-height: 2rem;
+    padding: 10px 30px 10px 14px;
+    margin: 5px 0;
+    background-color: transparent;
+    transition: all 300ms linear;
+}
+
+
+.menu-title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    opacity: 1;
+    text-align: center;
+    height: auto;
+
   }
 
-
-  .wrapper.collapsed-side-bar .main-panel > .main-content {
-      padding-left: 60px;
+  i {
+    font-size: 18px;
+    float: left;
+    margin-right: 10px;
+    line-height: 2rem !important;
+    width: 30px;
+    text-align: center;
+    color: #a9afbb;
   }

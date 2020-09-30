@@ -33,7 +33,7 @@ export class ToggleSidebarDirective implements AfterViewInit {
 
         if (this.dataToggle === 'expanded') {
             this.classes = 'fas fa-toggle-on';
-            this.dataToggle = 'collapsed';
+            this.dataToggle = 'collapsable';
             this.renderer.addClass(this.$wrapper, 'collapsed-side-bar');
 
         } else {
