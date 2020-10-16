@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 import { DirectivesModule } from './directives/directives.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -9,7 +10,8 @@ import { DirectivesModule } from './directives/directives.module';
   declarations: [AppSidebarComponent],
   imports: [
     DirectivesModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [AppSidebarComponent]
 })

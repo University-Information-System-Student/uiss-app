@@ -1,31 +1,42 @@
-<div class="sidebar">
-
-  <div class="sidebar-header">
-    <a class="nav-toggle cursor-pointer"  id="sidebarOpen">
-        <i appToggleSidebar class="fas fa-toggle-on" data-toggle="expanded"></i>
+<!-- <div class="sidebar"> -->
+<div class="sidebar-header">
+  <a class="nav-toggle cursor-pointer"  id="sidebarOpen">
+        <i appToggleSidebar class="fas fa-toggle-on" data-toggle="on"></i>
     </a>
-  </div>
-  <div class="sidebar-body">
-    <ul class="navigation">
-      <li>
-        <a>
-          <i class="fab fa-adn"></i>
-
-         <span class="menu-title">
-          Menu Item 1
-         </span> 
-        </a>
-      </li>
-      <li >
-        <a>
-          <i class="fas fa-air-freshener"></i>
-
-         <span class="menu-title">
-          Menu Item 2
-         </span> 
-        </a>
-      </li>
-    </ul>
-  </div>
-
 </div>
+<div class="sidebar-body">
+  <ul class="navigation">
+    <li *ngFor="let item of menuItems" [ngClass]="{'has-sub': item.class === 'has-sub'}">
+      <a  [routerLink]="item.path">
+          <i [ngClass]="[item.icon]"></i>
+         <span class="menu-title">
+          {{item.title}}
+         </span> 
+        </a>
+      <ul *ngIf="item.submenu.length > 0">
+        <li *ngFor="let subItem of item.submenu" [ngClass]="{'has-sub': subItem.class === 'has-sub'}">
+          <a  [routerLink]="subItem.path">
+                <i [ngClass]="[subItem.icon]"></i>
+               <span class="menu-title">
+                {{subItem.title}}
+               </span> 
+              </a>
+          <ul *ngIf="subItem.submenu.length > 0">
+            <li *ngFor="let subItem of subItem.submenu" [ngClass]="{'has-sub': item.class === 'has-sub'}">
+              <a  [routerLink]="subItem.path">
+                      <i [ngClass]="[subItem.icon]"></i>
+                     <span class="menu-title">
+                      {{subItem.title}}
+                     </span> 
+                    </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </li>
+
+  </ul>
+</div>
+
+<!-- </div> -->
