@@ -6,14 +6,15 @@
 </div>
 <div class="sidebar-body">
   <ul class="navigation">
-    <li *ngFor="let item of menuItems" [ngClass]="{'has-sub': item.class === 'has-sub'}">
-      <a  [routerLink]="item.path">
+    <li *ngFor="let item of menuItems" [ngClass]="{'has-sub': item.class === 'has-sub', 'open':expanded}">
+      <a  [routerLink]="item.path" (click)="expanded = !expanded">
           <i [ngClass]="[item.icon]"></i>
          <span class="menu-title">
           {{item.title}}
+          {{expanded}}
          </span> 
         </a>
-      <ul *ngIf="item.submenu.length > 0" [@slideInOut]="'1'">
+      <ul *ngIf="item.submenu.length > 0" [@slideInOut]="expanded">
         <li *ngFor="let subItem of item.submenu" [ngClass]="{'has-sub': subItem.class === 'has-sub'}">
           <a  [routerLink]="subItem.path">
                 <i [ngClass]="[subItem.icon]"></i>

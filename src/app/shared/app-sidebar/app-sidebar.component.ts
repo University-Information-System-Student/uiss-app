@@ -5,7 +5,8 @@ import {
 	animate,
 	style,
 	transition,
-	state
+	state,
+  AUTO_STYLE
 } from '@angular/animations';
 
 
