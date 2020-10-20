@@ -31,13 +31,11 @@ export class ToggleSidebarDirective implements AfterViewInit {
     @HostListener('click', ['$event'])
     onClick(e: any): void {
 
-        console.log(this.dataToggle);
         if (this.dataToggle === 'on') {
             this.classes = 'fas fa-toggle-on';
             this.dataToggle = 'off';
             this.classes = 'fas fa-toggle-off';
             this.$wrapper.classList.add('compact-menu');
-            this.renderer.addClass(this.$wrapper, 'collapsed-side-bar');
         } else {
             this.classes = 'fas fa-toggle-on';
             this.dataToggle = 'on';

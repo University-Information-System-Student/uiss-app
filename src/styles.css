@@ -17,7 +17,7 @@
 
 }
 
-.wrapper.collapsed-side-bar.compact-menu .sidebar:hover {
+.wrapper.compact-menu .sidebar:hover {
     width: 250px !important;
 }
 
@@ -35,19 +35,33 @@
     padding-left: 0;
     list-style: none;
 }
+.navigation > u {
+    font-size: 1rem;
+
+}
+
 
 .navigation>li {
     color: white;
 }
+ul {
+    list-style-type: none;
+}
 
-.navigation>li>a {
+.navigation>li a {
     display: block;
     overflow: hidden;
+    font-size: 22px;
     line-height: 2rem;
     padding: 10px 30px 10px 14px;
     margin: 5px 0;
     background-color: transparent;
     transition: all 300ms linear;
+    color: white;
+}
+
+.navigation>li a {
+    border-right: 6px solid red
 }
 
 
@@ -57,6 +71,7 @@
     font-weight: 400;
     letter-spacing: 0.6px;
     opacity: 1;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     height: auto;
 
@@ -75,7 +90,6 @@
 
 
 .sidebar {
-
     position: fixed;
     top: 0;
     bottom: 0;
@@ -107,6 +121,9 @@
 
 }
 
+.collapsed-side-bar .sidebar-header>a.nav-toggle {
+    display: none;
+}
 
 
 .sidebar-body {
@@ -117,18 +134,24 @@
 }
 
 
-.has-sub>a:after {
-    content: '>';
-    font-family: 'feather';
-    font-size: 1rem;
+.has-sub>a::after {
+
+    content: "\f107";
+    font-family:"Font Awesome 5 Pro";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 18px;
     display: inline-block;
     position: absolute;
     right: 15px;
-    top: 10px;
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    transform: rotate(0);
-    transition: -webkit-transform .2s ease-in-out;
+    top: 17px;
+}
+
+.wrapper.collapsed-side-bar .menu-title {
+    display: none;
+}
+
+.wrapper.collapsed-side-bar .has-sub>a::after {
+    content: "";
 }

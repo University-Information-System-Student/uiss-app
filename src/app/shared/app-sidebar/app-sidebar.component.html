@@ -13,7 +13,7 @@
           {{item.title}}
          </span> 
         </a>
-      <ul *ngIf="item.submenu.length > 0">
+      <ul *ngIf="item.submenu.length > 0" [@slideInOut]="'1'">
         <li *ngFor="let subItem of item.submenu" [ngClass]="{'has-sub': subItem.class === 'has-sub'}">
           <a  [routerLink]="subItem.path">
                 <i [ngClass]="[subItem.icon]"></i>

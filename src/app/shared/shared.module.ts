@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 import { DirectivesModule } from './directives/directives.module';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     DirectivesModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule
   ],
   exports: [AppSidebarComponent]
 })
